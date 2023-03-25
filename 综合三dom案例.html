@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn{
+        margin: 50px auto;
+        padding-top: 50px;
+        padding-left: 50px;
+        box-sizing: border-box;
+
+    }
+    .wrapper{
+        
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+
+    }
+
+    body{
+        background: url(./imges/1.jpg) no-repeat top center/cover;
+
+    }
+    .box{
+        width: 450px;
+        height: 450px;
+        background-color: skyblue;
+        border: 1px solid #000;
+
+    }
+</style>
+<body>
+    <div class="wrapper ">
+        <strong>抽奖</strong>
+        <h1>一等奖 <span id="one">???</span> </h1>
+        <h2> 二等奖<span id="two">????</span> </h2>
+        <h3>三等奖<span id="three">????</span> </h3>
+    </div>
+    <script>
+
+// 修改操作元素内容
+        const wrapper = document.querySelector('.wrapper')
+        // wrapper.className = 'box btn'
+        // wrapper.classList.add('box','btn')
+
+        // 切换
+        wrapper.classList.toggle('btn') 
+ 
+
+
+
+
+        const person = ['w','z','e','g','b']
+        const random = getrandom(0,person.length-1)
+        console.log(person[random])
+        const one = document.querySelector('#one')
+        
+        one.innerHTML = person[random]
+        person.splice(random,1)
+
+        const random2 = Math.floor(Math.random()*person.length)
+        const two = document.querySelector('#two')
+        two.innerHTML = person[random2]
+        person.splice(random2,1)
+
+        const random3 = Math.floor(Math.random()*person.length)
+        const three = document.querySelector('#three')
+        three.innerHTML = person[random3]
+        person.splice(random3,1)
+
+        function getrandom(n,m){
+            return Math.floor(Math.random()*(m-n+1))+n
+
+        }
+
+        const ran = getrandom(1,2)
+        document.body.style.backgroundImage = `url(./imges/${ran}.jpg)`
+
+
+    </script>
+</body>
+</html>

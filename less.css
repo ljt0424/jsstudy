@@ -1,0 +1,7 @@
+.father {
+  width: 2.5rem;
+}
+.father .son {
+  width: 200px;
+  height: 200px;
+}

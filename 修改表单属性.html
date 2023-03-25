@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" value="wo"> -->
+    <!-- <input type="checkbox" name="" id="" data-spm="jjj" data-j="555"> -->
+    <button class="btn" disabled>woyuedu(5)</button>
+    <script>
+        // const unname = document.querySelector('input')
+        // unname.value = 'mai'
+        // unname.type = 'password'
+
+        // const ipt = document.querySelector('input')
+        // ipt.checked = false
+        // console.log(ipt.dataset.spm)
+
+        // const but = document.querySelector('button')
+        // but.disabled = true
+        // if(but.click = true){
+        //     ipt.checked = true
+        // }else{
+        //     ipt.checked = false
+        // }
+
+/*         // 间歇函数
+        let i =1
+        setInterval(function(){
+            i++
+            document.write(i)
+        },200
+        
+        ) */
+
+        const but = document.querySelector('.btn')
+
+        let i = 5
+        let j = setInterval(function(){
+            i--
+            but.innerHTML = `woyuedu(${i})`
+            if(i===0){
+                clearInterval(j)
+                but.disabled = false
+            but.innerHTML = `同意`
+
+                    }
+            
+
+            
+        },1000)
+
+            
+
+        
+
+    </script>
+</body>
+</html>

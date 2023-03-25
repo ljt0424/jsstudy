@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*         let obj = {
+            uname : 'name',
+            age:'18',
+            wight:'0.55kg',
+            'goods-name':"xiaomi",
+            good_name:'xiao'
+        }
+
+        obj.price = '3666'
+        console.log(obj.age)
+        console.log(obj['goods-name'])
+        console.log(obj.good_name) */
+
+
+/*         let obj = {
+            uname:'我',
+            age:'18',
+            wight:'0.55kg',
+            'goods-name':"xiaomi",
+            good_name:'xiao',
+            song: function(){
+                console.log('bbbb')
+            },
+            Sum: function(x,y){
+                console.log(x+y)
+
+            }
+        }
+        obj.song()
+        obj.Sum(1,2)
+
+
+        for (let k in obj){
+            console.log(obj[k])
+
+        } */
+
+
+        // 遍历对象
+/*         let obj1 = [{
+            uname:'我',
+            age:'18',
+            wight:'0.55kg',
+            'goods-name':"xiaomi",
+            good_name:'xiao',
+        },{
+            uname:'我2',
+            age:'19',
+            wight:'0.6kg',
+            'goods-name':"xiaomi2",
+            good_name:'xiao2',
+        },{
+            uname:'我3',
+            age:'20',
+            wight:'0.7kg',
+            'goods-name':"xiaomi3",
+            good_name:'xiao3',
+        }]
+
+        for(let i = 0;i<obj1.length;i++){
+            for(let k in obj1[i]){
+                console.log(obj1[i][k])
+            }
+        } */
+
+        // 随机函数
+/*         let arr = [5,8,9,36]
+        let random = Math.floor(Math.random()*arr.length)
+        console.log(arr[random]) */
+
+/*         function getrandom(n,m){
+            return Math.floor(Math.random()*(m-n+1))+n
+
+        }
+        console.log(getrandom(2,5)) */
+
+
+        let name =['赵云','黄忠','关羽','张飞','马超','刘备','曹操']
+        let random = Math.floor(Math.random()*name.length)
+        while(true){
+            console.log(name[random])
+            name.splice(random,1)
+            break
+        }
+        console.log(name)
+        
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem('uname','ljt')
+        console.log(localStorage.getItem('uname'))
+        // localStorage.removeItem('uname')
+        // console.log(localStorage.getItem('uname'))
+
+        localStorage.setItem('uname','gai')
+        localStorage.setItem('age','18')
+
+        const obj = {
+            uname: 'lll',
+            age: 18,
+            gender: '女'
+        }
+        // 对象转换成JSON字符串JSON.stringify
+        localStorage.setItem('obj',JSON.stringify(obj))
+        console.log(localStorage.getItem('obj'))
+        // JSON字符串转换为对象JSON.parse
+        console.log(JSON.parse(localStorage.getItem('obj')) )
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 270px;
+        height: 50px;
+        border: 1px solid #000;
+        line-height: 50px;
+        text-align: center;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div></div>
+    <script>
+        const div = document.querySelector('div')
+        function getmyDate() {
+            const data = new Date()
+            let h = data.getHours()
+            h = h < 10 ? '0' + h : h
+            let m = data.getMinutes()
+            m = m < 10 ? '0' + m : m
+            let s = data.getSeconds()
+            s = s < 10 ? '0' + s : s
+            return `今天是：${data.getFullYear()}年${data.getMonth() + 1}月${data.getDate()}号 
+            ${h}:${m}:${s}`
+        }
+
+        div.innerHTML = getmyDate()
+        setInterval(function () {
+            div.innerHTML = getmyDate()
+        }, 1000)
+    </script>
+</body>
+
+</html>

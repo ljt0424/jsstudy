@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a{
+        text-decoration: none;
+    }
+    a,span{
+        color: palegreen;
+    }
+</style>
+<body>
+    <a href="https://www.zxzj.pro/">支付成功<span>5秒后跳转</span></a>
+
+
+    <script>
+
+        const span = document.querySelector('span')
+        const a = document.querySelector('a')
+        let num = 5
+        let timid = setInterval(function(){
+            num--
+            a.innerHTML = `支付成功<span>${num}秒后跳转</span>`
+            if(num===0){
+                clearInterval(timid)
+                location.href = 'https://www.zxzj.pro/'
+            }
+            
+        },1000)
+
+
+    </script>
+</body>
+</html>

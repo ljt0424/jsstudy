@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*         function getSum(n,m){
+
+
+            let sum = 0
+            for(let i=n;i<= m;i++){
+                sum+=i
+            }
+            
+
+            console.log(sum)
+            document.write(sum)
+            document.write('<br>')
+            return sum
+        }
+        let start = +prompt('请输入第一个数')
+        let end = +prompt('请输入第二个数')
+        getSum(start,end)
+        // getSum() */
+
+
+
+        // 计算时分秒
+
+        let second = prompt("请输入秒数：")
+        function getTime(t){
+            
+
+            let miao = parseInt (t%60);
+            let fen = parseInt(t/60%60);
+            let shi =parseInt(t/60/60%24);
+            shi = shi<10? '0'+shi:shi   
+            fen = fen<10? '0'+fen:fen  
+            miao = miao<10? '0'+miao:miao   
+            // let totle = prompt(`您输入的时间是${shi}时${fen}分${miao}秒`)
+            return `您输入的时间是${shi}时${fen}分${miao}秒`
+            
+
+        }
+
+        let str = getTime(second)
+        document.write(str)
+
+        
+        
+    </script>
+</body>
+</html>

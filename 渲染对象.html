@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        width: 600px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    table,
+    th,
+    td{
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+    }
+
+    caption{
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    tr{
+        height: 40px;
+        cursor: pointer;
+    }
+    table tr:nth-child(1){
+        background-color: #ddd;
+    }
+    table tr:not(:first-child):hover{
+        background-color: #eee;
+    }
+</style>
+<body>
+    <div class="table">
+        <table>
+            <caption>学生列表</caption>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>住址</th>
+            </tr>
+
+
+            <script>
+                let men =[
+                    {uname:'我',age:'18',wight:'0.55kg','good_name':'xiao'},
+                    {uname:'我2',age:'12',wight:'0.56kg','good_name':'xiao1'},
+                    {uname:'我3',age:'13',wight:'0.57kg','good_name':'xiao2'},
+                    {uname:'我4',age:'14',wight:'0.58kg','good_name':'xiao3'}
+                ]
+
+                for(let i = 0;i<men.length;i++){
+                    document.write(`            
+                    <tr>
+                        <th>${i+1}</th>
+                        <th>${men[i].uname}</th>
+                        <th>${men[i].age}</th>
+                        <th>${men[i].wight}</th>
+                        <th>${men[i]['good_name']}</th>
+                    </tr>`)
+                }
+            </script>
+        </table>
+    </div>
+
+
+</body>
+</html>

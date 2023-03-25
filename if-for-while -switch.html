@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // let score = +prompt('输入数字')
+        // if(score>700){
+        //     console.log('恭喜')
+        // }
+
+
+
+/*         // 冒泡排序
+        let num = [5,2,8,3,7]
+        
+        for(i=0;i<num.length;i++){
+            for(j=0;j<num.length-i-1;j++){
+
+                if(num[j]>num[j+1]){
+                    let a = num[j]
+                    num[j] = num[j+1]
+                    num[j+1] = a
+                }
+            }
+        }
+        for(i=0;i<num.length;i++){
+            document.write(num[i]+'\t')
+        } */
+
+
+/*         练习1
+        let year = +prompt('输入年份')
+        if(year % 4 === 0 && year % 100 ! ==0 || year % 400 === 0){
+            alert(`${year}年是闰年`)
+
+        }else{
+            alert(`${year}年是平年`)
+
+        } */
+        
+/*         // 三元运算
+        let nums = +prompt('输入')
+        socre = nums>=60 ? alert('及格'): alert('不及格') */
+
+
+/*         // 三元运算例子
+        let nums = prompt('输入')
+        // nums为字符串形式，和0相加变为03字符串
+         nums = nums < 10 ? 0 + nums : nums
+         alert(nums) */
+
+
+
+        //  switch 加减乘除
+        // let num1 = +prompt('输入1')
+        // let num2 = +prompt('输入2')
+        // let num3 = prompt('输入+-*/')
+
+/*         switch(num3){
+            case '+':
+                alert(`加法${num1+num2}`)
+                break
+            case '-':
+                alert(`减法${num1-num2}`)
+                break
+            case '*':
+                alert(`乘法${num1*num2}`) 
+                break           
+            case '/':
+                alert(`除法${num1/num2}`)
+                break
+            default:
+                alert(`输入正确数字、符号`)
+        } */
+
+        // while死循环
+        // while(true){
+        //     let str = prompt('你爱我吗？')
+        //     if(str==='爱'){
+        //         break
+        //     }
+        // }
+
+
+/*         // 数组筛选
+        let arr = [2,,5,4,8,3,6,9,8,7,22,55,14,15,13,6]
+        let arrnew = []
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]>10){
+                arrnew.push(arr[i])
+            }
+        }
+        console.log(arrnew) */
+
+
+        let arr = [2,5,4,8,3,6,9,8,7,22,55,14,15,13,6]
+        // let arrnew = []
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]>10){
+                arr.splice(i,1)
+            }
+        }
+        // console.log(arr)
+        document.write(arr)
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>
